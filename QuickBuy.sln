@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.Domain", "ClassLibrary1\QuickBuy.Domain.csproj", "{487B94AF-1AD7-43DD-BFC0-A3F584890795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickBuy.Repository", "QuickBuy.Repository\QuickBuy.Repository.csproj", "{4BB64517-EB63-4297-B86D-C51F3BC88E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.Repository", "QuickBuy.Repository\QuickBuy.Repository.csproj", "{4BB64517-EB63-4297-B86D-C51F3BC88E53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickBuy.API", "QuickBuy.API\QuickBuy.API.csproj", "{A19E92FC-8563-49E5-8C49-1FB6331F6FD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.API", "QuickBuy.API\QuickBuy.API.csproj", "{A19E92FC-8563-49E5-8C49-1FB6331F6FD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickBuy.Domain", "QuickBuy.Domain\QuickBuy.Domain.csproj", "{30D9FA14-01DE-4BCB-B532-663DAC0EEA58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickBuy.Web", "QuickBuy.Web\QuickBuy.Web.csproj", "{E85618A8-EBCF-4AD5-AA3C-86B4204E0CEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{487B94AF-1AD7-43DD-BFC0-A3F584890795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{487B94AF-1AD7-43DD-BFC0-A3F584890795}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{487B94AF-1AD7-43DD-BFC0-A3F584890795}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{487B94AF-1AD7-43DD-BFC0-A3F584890795}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4BB64517-EB63-4297-B86D-C51F3BC88E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4BB64517-EB63-4297-B86D-C51F3BC88E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BB64517-EB63-4297-B86D-C51F3BC88E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +25,14 @@ Global
 		{A19E92FC-8563-49E5-8C49-1FB6331F6FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A19E92FC-8563-49E5-8C49-1FB6331F6FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A19E92FC-8563-49E5-8C49-1FB6331F6FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D9FA14-01DE-4BCB-B532-663DAC0EEA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D9FA14-01DE-4BCB-B532-663DAC0EEA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D9FA14-01DE-4BCB-B532-663DAC0EEA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D9FA14-01DE-4BCB-B532-663DAC0EEA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85618A8-EBCF-4AD5-AA3C-86B4204E0CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85618A8-EBCF-4AD5-AA3C-86B4204E0CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85618A8-EBCF-4AD5-AA3C-86B4204E0CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85618A8-EBCF-4AD5-AA3C-86B4204E0CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
