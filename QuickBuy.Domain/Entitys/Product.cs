@@ -4,7 +4,7 @@ using System.Text;
 
 namespace QuickBuy.Domain.Entitys
 {
-    public class Product
+    public class Product : Entity
     {
         public int Id { get; set; }
 
@@ -13,5 +13,10 @@ namespace QuickBuy.Domain.Entitys
         public string Description { get; set; }
 
         public decimal Price { get; set; }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

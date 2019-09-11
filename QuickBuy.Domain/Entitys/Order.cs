@@ -1,11 +1,12 @@
 ﻿using QuickBuy.Domain.Valuables;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace QuickBuy.Domain.Entitys
 {
-    public class Order
+    public class Order : Entity
     {
         public int Id { get; set; }
 
@@ -28,5 +29,24 @@ namespace QuickBuy.Domain.Entitys
         public FormPayment FormPayment { get; set; }
 
         public ICollection<OrderedItem> OrderedItems { get; set; }
+
+        public override void Validate()
+        {
+            ClearValidateMessage();
+
+            if (!OrderedItems.Any())
+            {
+                AddMessageValidate("*Critical* The Order Cannot stay without products!");
+            }
+            if (string.IsNullOrEmpty(CEP))
+            {
+                AddMessageValidate("*Critical* Cep must completed");
+            }
+        }
+
+        private void ClearValidateMessage()
+        {
+            ClearMessageValidate();
+        }
     }
 }
