@@ -23,7 +23,7 @@ namespace QuickBuy.Domain.Entitys
             LastName = lastName;
         }
 
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
 
         public override void Validate()
         {

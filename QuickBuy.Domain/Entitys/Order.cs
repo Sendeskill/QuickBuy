@@ -14,15 +14,17 @@ namespace QuickBuy.Domain.Entitys
 
         public int UserId { get; set; }
 
+        public virtual User User { get; set; }
+
         public DateTime DateDelivery { get; set; }
 
-        public String CEP { get; set; }
+        public string CEP { get; set; }
 
-        public String State { get; set; }
+        public string State { get; set; }
 
-        public String Adress { get; set; }
+        public string Adress { get; set; }
 
-        public String NumberAdress { get; set; }
+        public string NumberAdress { get; set; }
 
         public int FormPaymnentId { get; set; }
 
