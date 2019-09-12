@@ -16,7 +16,7 @@ namespace QuickBuy.Domain.Entitys
 
         protected void AddMessageValidate(string msg)
         {
-            validateMessage.Add(msg);
+            validateMessage.Add("*Critical* " + msg);
         }
 
         protected void ClearMessageValidate()

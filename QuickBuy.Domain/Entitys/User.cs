@@ -27,7 +27,23 @@ namespace QuickBuy.Domain.Entitys
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(Password))
+            {
+                AddMessageValidate("Password not defined");
+            }
+            if (string.IsNullOrEmpty(Email))
+            {
+                AddMessageValidate("Email not defined");
+            }
+            if (string.IsNullOrEmpty(FirstName))
+            {
+                AddMessageValidate("First Name not defined");
+            }
+        }
+
+        private void ClearValidateMessage()
+        {
+            ClearMessageValidate();
         }
     }
 }

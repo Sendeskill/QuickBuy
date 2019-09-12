@@ -16,7 +16,23 @@ namespace QuickBuy.Domain.Entitys
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Name))
+            {
+                AddMessageValidate("Name not defined");
+            }
+            if (string.IsNullOrEmpty(Description))
+            {
+                AddMessageValidate("Description not defined");
+            }
+            if (Price < 0)
+            {
+                AddMessageValidate("Price cannot be negative");
+            }
+        }
+
+        private void ClearValidateMessage()
+        {
+            ClearMessageValidate();
         }
     }
 }

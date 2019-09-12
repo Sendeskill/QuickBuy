@@ -14,7 +14,19 @@ namespace QuickBuy.Domain.Entitys
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (ProductId == 0)
+            {
+                AddMessageValidate("Reference ID not found");
+            }
+            if(Amount == 0)
+            {
+                AddMessageValidate("Amount not defined");
+            }
+        }
+
+        private void ClearValidateMessage()
+        {
+            ClearMessageValidate();
         }
     }
 }

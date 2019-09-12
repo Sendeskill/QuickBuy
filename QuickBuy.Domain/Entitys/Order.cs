@@ -36,11 +36,11 @@ namespace QuickBuy.Domain.Entitys
 
             if (!OrderedItems.Any())
             {
-                AddMessageValidate("*Critical* The Order Cannot stay without products!");
+                AddMessageValidate("The Order Cannot stay without products!");
             }
             if (string.IsNullOrEmpty(CEP))
             {
-                AddMessageValidate("*Critical* Cep must completed");
+                AddMessageValidate("Cep must be completed");
             }
         }
 
