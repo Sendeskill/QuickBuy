@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace QuickBuy.Domain.Contract
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IOrderedItemRepository : IRepository<OrderedItem>
     {
-        Task Register(IUserManager param);
+        Task Add(IOrderedItemManager param);
     }
 }

@@ -1,6 +1,8 @@
 ﻿using QuickBuy.Domain.Valuables;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 
@@ -8,6 +10,8 @@ namespace QuickBuy.Domain.Entitys
 {
     public class Order : Entity
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public DateTime DateOrder { get; set; }
@@ -31,6 +35,22 @@ namespace QuickBuy.Domain.Entitys
         public FormPayment FormPayment { get; set; }
 
         public ICollection<OrderedItem> OrderedItems { get; set; }
+
+        public Order(DateTime dateOrder, int userId, User user, DateTime dateDelivery, string cEP, string state, 
+            string adress, string numberAdress, int formPaymnentId, FormPayment formPayment, ICollection<OrderedItem> orderedItems)
+        {
+            DateOrder = dateOrder;
+            UserId = userId;
+            User = user;
+            DateDelivery = dateDelivery;
+            CEP = cEP;
+            State = state;
+            Adress = adress;
+            NumberAdress = numberAdress;
+            FormPaymnentId = formPaymnentId;
+            FormPayment = formPayment;
+            OrderedItems = orderedItems;
+        }
 
         public override void Validate()
         {

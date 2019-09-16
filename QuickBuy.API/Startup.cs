@@ -4,7 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuickBuy.API.Managers;
+using QuickBuy.Domain.Contract;
+using QuickBuy.Domain.Contract.Managers;
 using QuickBuy.Repository.Context;
+using QuickBuy.Repository.Repository;
 
 namespace QuickBuy.API
 {
@@ -23,6 +27,9 @@ namespace QuickBuy.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUserManager, UserManager>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<QuickBuyContext>(options => options

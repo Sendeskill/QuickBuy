@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace QuickBuy.Domain.Entitys
 {
     public class User : Entity
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public string Password { get; set; }
@@ -14,16 +18,15 @@ namespace QuickBuy.Domain.Entitys
 
         public string LastName { get; set; }
 
-        public User(int id, string password, string email, string firstName, string lastName)
+        public User(string password, string email, string firstName, string lastName)
         {
-            Id = id;
             Password = password;
             Email = email;
             FirstName = firstName;
             LastName = lastName;
         }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 
         public override void Validate()
         {

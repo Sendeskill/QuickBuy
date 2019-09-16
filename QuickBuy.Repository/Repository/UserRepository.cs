@@ -7,7 +7,6 @@ namespace QuickBuy.Repository.Repository
     {
         public UserRepository()
         {
-
         }
     }
 }

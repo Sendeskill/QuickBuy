@@ -9,18 +9,13 @@ namespace QuickBuy.Repository.Context
     {
 
         public DbSet<User> Users { get; set; }
-
         public DbSet<Order> Orders { get; set; }
-
         public DbSet<Product> Products { get; set; }
-
         public DbSet<OrderedItem> OrderedItems { get; set; }
-
-        public DbSet<FormPayment> FormPayments{ get; set; }
+        public DbSet<FormPayment> FormPayments { get; set; }
 
         public QuickBuyContext(DbContextOptions options) : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -31,8 +26,8 @@ namespace QuickBuy.Repository.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderedItemConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }
